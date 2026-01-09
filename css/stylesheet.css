@@ -1,0 +1,64 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Typography */
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --color-text-primary: #333333;
+    --color-bg-secondary: #f9f9f9;
+}
+
+body { 
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-bg-secondary);
+}
+
+#app-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.app-output {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: #333333 3px solid;
+    border-radius: 10px;
+    margin: 20px 0;
+    background-color: white;
+}
+
+.option-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: black 2px solid;
+    font-weight: bold;
+    margin-block-end: 0.4rem;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+
+}
+
+.option-button:hover {
+    background-color: #eeeeee;
+}
+
+.player-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
