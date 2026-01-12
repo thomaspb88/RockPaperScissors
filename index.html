@@ -3,15 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors</title>
     <script src="./js/javascript.js" defer></script>
+    <link href="./css/stylesheet.css" rel="stylesheet">
 </head>
 <body>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            playGame("rock");
-        });
-    </script>
-    
+    <div id="app-frame">
+        <header><h1>Rock Paper Scissors</h1></header>
+        <main>
+            <div id="scoreboard">
+                <div id="player-score">
+                    <div class="score-label">Player</div>
+                    <span class="score-value" id="player-score-value">0</span>
+                </div>
+                 <div id="draw-score">
+                    <div class="score-label">Draws</div>
+                    <span class="score-value" id="draw-score-value">0</span>
+                </div> 
+                <div id="computer-score">
+                    <div class="score-label">Computer</div>
+                    <span class="score-value" id="computer-score-value">0</span>
+                </div>  
+            </div>
+            <div id="choices">
+                <button class="choice-button" onclick="play('rock')" id="rock-button">🪨</button>
+                <button class="choice-button" onclick="play('paper')" id="paper-button">📄</button>
+                <button class="choice-button" onclick="play('scissors')" id="scissors-button">✂️</button>
+            </div>
+            <div id="result-display">
+                <div id="computer-choice-display">You: <span id="player-choice"></span> vs Computer: <span id="computer-choice"></span></div>
+                <h2 id="result-message">Make your move!</h2>    
+            </div>
+            <div id="reset-container">
+                <button id="reset-button">Reset Game</button>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
